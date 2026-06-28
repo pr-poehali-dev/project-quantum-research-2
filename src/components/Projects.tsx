@@ -51,11 +51,11 @@ export function Projects() {
           </span>
         </div>
 
-        <div className="flex flex-col border-t border-border">
+        <div className="flex flex-col border border-border-strong rounded-lg overflow-hidden divide-y divide-border-strong">
           {projects.map((project, i) => (
             <div
               key={project.title}
-              className="group relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 border-b border-border py-8 md:py-10 hover:bg-muted/50 transition-colors duration-300 px-2 md:px-6"
+              className="group relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 py-8 md:py-10 hover:bg-muted/50 transition-colors duration-300 px-4 md:px-8"
             >
               <span className="font-sentient text-3xl md:text-5xl text-foreground/20 group-hover:text-violet transition-colors duration-300">
                 {String(i + 1).padStart(2, "0")}
