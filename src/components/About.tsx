@@ -17,11 +17,11 @@ export function About() {
       </span>
 
       <div className="container grid md:grid-cols-2 gap-12 md:gap-20 items-center relative">
-        <div className="md:pl-8 md:border-l-2 md:border-primary/40">
+        <div className="md:pl-8 md:border-l-2 md:border-teal/50">
           <Pill className="mb-8">ОБО МНЕ</Pill>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient leading-tight">
             Создаю продукты, <br />
-            которыми <i className="font-light">пользуются</i>
+            которыми <i className="font-light text-teal">пользуются</i>
           </h2>
           <p className="font-mono text-sm sm:text-base text-foreground/60 mt-8 max-w-[460px] leading-relaxed">
             Я специалист, который превращает идеи в работающие решения. Люблю
@@ -36,7 +36,7 @@ export function About() {
               key={stat.label}
               className="group flex items-baseline justify-between gap-4 py-6 hover:px-4 transition-all duration-300"
             >
-              <div className="text-5xl md:text-6xl font-sentient text-foreground group-hover:text-primary transition-colors duration-300">
+              <div className="text-5xl md:text-6xl font-sentient text-foreground group-hover:text-teal transition-colors duration-300">
                 {stat.value}
               </div>
               <div className="font-mono text-xs text-foreground/50 uppercase tracking-wider">

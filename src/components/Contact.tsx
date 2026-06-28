@@ -3,9 +3,9 @@ import { Button } from "./ui/button";
 import Icon from "@/components/ui/icon";
 
 const links = [
-  { icon: "Mail", label: "Email", value: "hello@example.com", href: "mailto:hello@example.com" },
-  { icon: "Send", label: "Telegram", value: "@username", href: "#" },
-  { icon: "Github", label: "GitHub", value: "github.com/username", href: "#" },
+  { icon: "Mail", label: "Email", value: "hello@example.com", href: "mailto:hello@example.com", color: "text-primary", hover: "hover:border-primary/50" },
+  { icon: "Send", label: "Telegram", value: "@username", href: "#", color: "text-teal", hover: "hover:border-teal/50" },
+  { icon: "Github", label: "GitHub", value: "github.com/username", href: "#", color: "text-violet", hover: "hover:border-violet/50" },
 ];
 
 export function Contact() {
@@ -17,7 +17,7 @@ export function Contact() {
       <div className="container text-center">
         <Pill className="mb-8">КОНТАКТЫ</Pill>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
-          Давайте <i className="font-light">работать</i> вместе
+          Давайте <i className="font-light text-primary">работать</i> вместе
         </h2>
         <p className="font-mono text-sm sm:text-base text-foreground/60 mt-8 max-w-[440px] mx-auto leading-relaxed">
           Открыт для новых проектов и предложений. Напишите — отвечу в течение
@@ -29,12 +29,12 @@ export function Contact() {
             <a
               key={link.label}
               href={link.href}
-              className="group flex items-center gap-3 border border-border bg-background hover:bg-[#0a0a0a] hover:border-primary/40 transition-all duration-300 px-5 py-3"
+              className={`group flex items-center gap-3 border border-border bg-background hover:bg-[#0a0a0a] transition-all duration-300 px-5 py-3 ${link.hover}`}
             >
               <Icon
                 name={link.icon}
                 size={18}
-                className="text-primary"
+                className={link.color}
               />
               <span className="font-mono text-sm text-foreground/70 group-hover:text-foreground transition-colors">
                 {link.value}

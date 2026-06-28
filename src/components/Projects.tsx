@@ -43,7 +43,7 @@ export function Projects() {
           <div>
             <Pill className="mb-8">ПРОЕКТЫ</Pill>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
-              Избранные <i className="font-light">работы</i>
+              Избранные <i className="font-light text-violet">работы</i>
             </h2>
           </div>
           <span className="hidden md:block font-mono text-sm text-foreground/40">
@@ -57,12 +57,12 @@ export function Projects() {
               key={project.title}
               className="group relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 border-b border-border py-8 md:py-10 hover:bg-[#0a0a0a] transition-colors duration-300 px-2 md:px-6"
             >
-              <span className="font-sentient text-3xl md:text-5xl text-foreground/20 group-hover:text-primary transition-colors duration-300">
+              <span className="font-sentient text-3xl md:text-5xl text-foreground/20 group-hover:text-violet transition-colors duration-300">
                 {String(i + 1).padStart(2, "0")}
               </span>
 
               <div>
-                <div className="flex items-center gap-3 font-mono text-xs uppercase text-primary mb-3">
+                <div className="flex items-center gap-3 font-mono text-xs uppercase text-violet mb-3">
                   {project.category}
                   <span className="text-foreground/30">/ {project.year}</span>
                 </div>
@@ -87,7 +87,7 @@ export function Projects() {
               <Icon
                 name="ArrowUpRight"
                 size={28}
-                className="justify-self-end text-foreground/30 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0"
+                className="justify-self-end text-foreground/30 group-hover:text-violet group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0"
               />
             </div>
           ))}

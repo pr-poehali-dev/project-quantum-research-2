@@ -18,6 +18,9 @@
     --primary: 48 100% 50%;
     --primary-foreground: 0 0% 100%;
 
+    --accent-violet: 265 85% 65%;
+    --accent-teal: 175 70% 50%;
+
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
 
@@ -82,7 +85,7 @@
   }
 
   .font-sentient {
-    font-family: 'PT Serif', serif;
+    font-family: "PT Serif", serif;
   }
 
   .shadow-glow {
@@ -106,9 +109,13 @@
 
 /* Vignette effect overlay */
 #webgl::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 30%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }

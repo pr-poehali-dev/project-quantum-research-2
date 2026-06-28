@@ -6,33 +6,45 @@ const skills = [
     icon: "Code2",
     title: "Frontend-разработка",
     desc: "React, TypeScript, Tailwind CSS — современные интерфейсы.",
+    color: "primary",
   },
   {
     icon: "Server",
     title: "Backend-разработка",
     desc: "Python, API, базы данных и серверная логика.",
+    color: "teal",
   },
   {
     icon: "Palette",
     title: "UI/UX дизайн",
     desc: "Продумываю удобные и красивые интерфейсы.",
+    color: "violet",
   },
   {
     icon: "Smartphone",
     title: "Адаптивная вёрстка",
     desc: "Сайты, которые отлично выглядят на любом экране.",
+    color: "teal",
   },
   {
     icon: "Database",
     title: "Работа с данными",
     desc: "Проектирование, оптимизация и аналитика.",
+    color: "violet",
   },
   {
     icon: "Rocket",
     title: "Запуск продуктов",
     desc: "От идеи до публикации и поддержки.",
+    color: "primary",
   },
 ];
+
+const colorMap: Record<string, { text: string; shadow: string }> = {
+  primary: { text: "text-primary", shadow: "group-hover:shadow-primary/40" },
+  teal: { text: "text-teal", shadow: "group-hover:shadow-teal/40" },
+  violet: { text: "text-violet", shadow: "group-hover:shadow-violet/40" },
+};
 
 export function Skills() {
   return (
@@ -71,7 +83,9 @@ export function Skills() {
               <span className="absolute -top-4 right-1 text-8xl font-sentient text-white/[0.03] group-hover:text-primary/10 transition-colors duration-300 select-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <div className="relative size-12 flex items-center justify-center border border-border text-primary mb-6 group-hover:shadow-glow group-hover:shadow-primary/30 transition-shadow duration-300">
+              <div
+                className={`relative size-12 flex items-center justify-center border border-border mb-6 group-hover:shadow-glow transition-shadow duration-300 ${colorMap[skill.color].text} ${colorMap[skill.color].shadow}`}
+              >
                 <Icon name={skill.icon} size={22} />
               </div>
               <h3 className="relative text-xl font-sentient mb-3">
