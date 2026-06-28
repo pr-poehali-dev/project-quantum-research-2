@@ -1,0 +1,58 @@
+import { Pill } from "./Pill";
+import { Button } from "./ui/button";
+import Icon from "@/components/ui/icon";
+
+const links = [
+  { icon: "Mail", label: "Email", value: "hello@example.com", href: "mailto:hello@example.com" },
+  { icon: "Send", label: "Telegram", value: "@username", href: "#" },
+  { icon: "Github", label: "GitHub", value: "github.com/username", href: "#" },
+];
+
+export function Contact() {
+  return (
+    <section
+      id="contact"
+      className="relative z-10 bg-[#050505] border-t border-border py-24 md:py-36"
+    >
+      <div className="container text-center">
+        <Pill className="mb-8">КОНТАКТЫ</Pill>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
+          Давайте <i className="font-light">работать</i> вместе
+        </h2>
+        <p className="font-mono text-sm sm:text-base text-foreground/60 mt-8 max-w-[440px] mx-auto leading-relaxed">
+          Открыт для новых проектов и предложений. Напишите — отвечу в течение
+          дня.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mt-12">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="group flex items-center gap-3 border border-border bg-background hover:bg-[#0a0a0a] hover:border-primary/40 transition-all duration-300 px-5 py-3"
+            >
+              <Icon
+                name={link.icon}
+                size={18}
+                className="text-primary"
+              />
+              <span className="font-mono text-sm text-foreground/70 group-hover:text-foreground transition-colors">
+                {link.value}
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <a className="contents" href="mailto:hello@example.com">
+          <Button className="mt-12">[Написать мне]</Button>
+        </a>
+
+        <div className="mt-20 pt-8 border-t border-border">
+          <p className="font-mono text-xs text-foreground/40">
+            © {new Date().getFullYear()} · Моё Портфолио
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
