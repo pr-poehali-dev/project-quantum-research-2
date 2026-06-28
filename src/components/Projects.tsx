@@ -55,7 +55,7 @@ export function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.title}
-              className="group relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 border-b border-border py-8 md:py-10 hover:bg-[#0a0a0a] transition-colors duration-300 px-2 md:px-6"
+              className="group relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 border-b border-border py-8 md:py-10 hover:bg-muted/50 transition-colors duration-300 px-2 md:px-6"
             >
               <span className="font-sentient text-3xl md:text-5xl text-foreground/20 group-hover:text-violet transition-colors duration-300">
                 {String(i + 1).padStart(2, "0")}

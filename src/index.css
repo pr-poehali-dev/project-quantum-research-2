@@ -6,36 +6,36 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
 
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 48 100% 50%;
+    --primary: 38 92% 48%;
     --primary-foreground: 0 0% 100%;
 
-    --accent-violet: 265 85% 65%;
-    --accent-teal: 175 70% 50%;
+    --accent-violet: 265 75% 55%;
+    --accent-teal: 178 75% 38%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 92%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 26%;
-    --input: 0 0% 26%;
-    --ring: 48 100% 50%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 38 92% 48%;
 
     --radius: 0.5rem;
 
@@ -116,6 +116,6 @@
   background: radial-gradient(
     ellipse at center,
     transparent 30%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(244, 244, 245, 0.7) 100%
   );
 }

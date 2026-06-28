@@ -12,7 +12,7 @@ export function About() {
       id="about"
       className="relative z-10 bg-background border-t border-border py-24 md:py-36 overflow-hidden"
     >
-      <span className="pointer-events-none absolute -left-8 top-1/2 -translate-y-1/2 font-sentient text-[18rem] md:text-[26rem] leading-none text-white/[0.02] select-none">
+      <span className="pointer-events-none absolute -left-8 top-1/2 -translate-y-1/2 font-sentient text-[18rem] md:text-[26rem] leading-none text-foreground/[0.04] select-none">
         ”
       </span>
 
@@ -34,7 +34,7 @@ export function About() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="group flex items-baseline justify-between gap-4 py-6 hover:px-4 transition-all duration-300"
+              className="group flex items-baseline justify-between gap-4 py-6 hover:px-4 hover:bg-muted/50 transition-all duration-300"
             >
               <div className="text-5xl md:text-6xl font-sentient text-foreground group-hover:text-teal transition-colors duration-300">
                 {stat.value}

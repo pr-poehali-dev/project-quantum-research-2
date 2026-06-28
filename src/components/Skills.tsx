@@ -50,13 +50,13 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="relative z-10 bg-[#050505] border-t border-border py-24 md:py-36 overflow-hidden"
+      className="relative z-10 bg-muted/40 border-t border-border py-24 md:py-36 overflow-hidden"
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        className="pointer-events-none absolute inset-0 opacity-[0.5]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+            "linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
       />
@@ -78,9 +78,9 @@ export function Skills() {
           {skills.map((skill, i) => (
             <div
               key={skill.title}
-              className="group relative bg-background hover:bg-[#0a0a0a] transition-colors duration-300 p-8 overflow-hidden"
+              className="group relative bg-card hover:bg-background transition-colors duration-300 p-8 overflow-hidden"
             >
-              <span className="absolute -top-4 right-1 text-8xl font-sentient text-white/[0.03] group-hover:text-primary/10 transition-colors duration-300 select-none">
+              <span className="absolute -top-4 right-1 text-8xl font-sentient text-foreground/[0.04] group-hover:text-primary/10 transition-colors duration-300 select-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div

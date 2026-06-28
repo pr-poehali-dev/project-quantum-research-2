@@ -12,7 +12,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative z-10 bg-[#050505] border-t border-border py-24 md:py-36"
+      className="relative z-10 bg-muted/40 border-t border-border py-24 md:py-36"
     >
       <div className="container text-center">
         <Pill className="mb-8">КОНТАКТЫ</Pill>
@@ -29,7 +29,7 @@ export function Contact() {
             <a
               key={link.label}
               href={link.href}
-              className={`group flex items-center gap-3 border border-border bg-background hover:bg-[#0a0a0a] transition-all duration-300 px-5 py-3 ${link.hover}`}
+              className={`group flex items-center gap-3 border border-border bg-card hover:bg-background transition-all duration-300 px-5 py-3 ${link.hover}`}
             >
               <Icon
                 name={link.icon}
