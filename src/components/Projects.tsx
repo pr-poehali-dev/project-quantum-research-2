@@ -5,21 +5,29 @@ const projects = [
   {
     title: "Веб-платформа",
     category: "Frontend · Backend",
+    year: "2025",
+    tags: ["React", "Python", "PostgreSQL"],
     desc: "Полноценное веб-приложение с личным кабинетом и аналитикой.",
   },
   {
     title: "Мобильный сервис",
     category: "UI/UX · React",
+    year: "2024",
+    tags: ["React Native", "Figma"],
     desc: "Адаптивный сервис с интуитивным интерфейсом для пользователей.",
   },
   {
     title: "Корпоративный сайт",
     category: "Дизайн · Вёрстка",
+    year: "2024",
+    tags: ["Tailwind", "Three.js"],
     desc: "Премиальный лендинг с анимациями и фирменным стилем.",
   },
   {
     title: "Дашборд аналитики",
     category: "Данные · Визуализация",
+    year: "2023",
+    tags: ["TypeScript", "D3.js"],
     desc: "Интерактивные графики и отчёты в реальном времени.",
   },
 ];
@@ -31,35 +39,56 @@ export function Projects() {
       className="relative z-10 bg-background border-t border-border py-24 md:py-36"
     >
       <div className="container">
-        <div className="text-center mb-16">
-          <Pill className="mb-8">ПРОЕКТЫ</Pill>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
-            Избранные <i className="font-light">работы</i>
-          </h2>
+        <div className="flex items-end justify-between mb-16">
+          <div>
+            <Pill className="mb-8">ПРОЕКТЫ</Pill>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
+              Избранные <i className="font-light">работы</i>
+            </h2>
+          </div>
+          <span className="hidden md:block font-mono text-sm text-foreground/40">
+            {String(projects.length).padStart(2, "0")} кейсов
+          </span>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
-          {projects.map((project) => (
+        <div className="flex flex-col border-t border-border">
+          {projects.map((project, i) => (
             <div
               key={project.title}
-              className="group bg-background hover:bg-[#0a0a0a] transition-colors duration-300 p-8 md:p-10"
+              className="group relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 border-b border-border py-8 md:py-10 hover:bg-[#0a0a0a] transition-colors duration-300 px-2 md:px-6"
             >
-              <div className="font-mono text-xs uppercase text-primary mb-4">
-                {project.category}
-              </div>
-              <div className="flex items-start justify-between gap-4">
+              <span className="font-sentient text-3xl md:text-5xl text-foreground/20 group-hover:text-primary transition-colors duration-300">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+
+              <div>
+                <div className="flex items-center gap-3 font-mono text-xs uppercase text-primary mb-3">
+                  {project.category}
+                  <span className="text-foreground/30">/ {project.year}</span>
+                </div>
                 <h3 className="text-2xl md:text-3xl font-sentient">
                   {project.title}
                 </h3>
-                <Icon
-                  name="ArrowUpRight"
-                  size={24}
-                  className="text-foreground/40 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0"
-                />
+                <p className="font-mono text-sm text-foreground/50 mt-3 leading-relaxed max-w-[420px]">
+                  {project.desc}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-mono text-[11px] uppercase text-foreground/40 border border-border px-2.5 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <p className="font-mono text-sm text-foreground/50 mt-4 leading-relaxed">
-                {project.desc}
-              </p>
+
+              <Icon
+                name="ArrowUpRight"
+                size={28}
+                className="justify-self-end text-foreground/30 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0"
+              />
             </div>
           ))}
         </div>
